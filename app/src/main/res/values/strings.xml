@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Challenge Leroy Merlin</string>
+    <string name="tasks">Tarefas</string>
+    <string name="tasks_error">Erro ao carregar as tarefas.</string>
+    <string name="tasks_empty">Não há tarefas.</string>
+    <string name="close">Fechar</string>
+    <string name="name">Nome</string>
+    <string name="description">Descrição</string>
+    <string name="new_task">Nova Tarefa</string>
+    <string name="new_task_success">Tarefa salva com sucesso.</string>
+    <string name="new_task_error">Erro ao salvar tarefa.</string>
+    <string name="delete_task_error">Erro ao deletar tarefa.</string>
+</resources>

@@ -1,0 +1,5 @@
+include ':data'
+include ':data'
+include ':domain'
+include ':app'
+rootProject.name = "Challenge Leroy Merlin"

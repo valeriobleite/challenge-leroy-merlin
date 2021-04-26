@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion rootProject.versions.compileSdk
+    buildToolsVersion rootProject.versions.buildTools
+
+    defaultConfig {
+        applicationId "pt.leite.valerio.challengeleroymerlin"
+        minSdkVersion rootProject.versions.minSdk
+        targetSdkVersion rootProject.versions.targetSdk
+        versionCode rootProject.versions.versionCode
+        versionName rootProject.versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':data')
+
+    implementation rootProject.libraries.kotlin
+    implementation rootProject.libraries.androidx
+    implementation rootProject.libraries.appCompat
+    implementation rootProject.libraries.material
+    implementation rootProject.libraries.constrantLayout
+    implementation rootProject.libraries.liveData
+    implementation rootProject.libraries.viewModel
+    implementation rootProject.libraries.navigationFragment
+    implementation rootProject.libraries.navigationUI
+    implementation rootProject.libraries.hilt
+
+    kapt rootProject.libraries.hiltCompile
+}
+
+kapt {
+    correctErrorTypes true
+}
